@@ -9,7 +9,7 @@ int main(){
         scanf_s("%d", &listofNum[i]);
     }
     
-    printf("奇数>> ");
+    printf("偶数>> ");
     for (int i = 0; i < length; i++)
     {
         if (listofNum[i] % 2 == 0){
@@ -19,7 +19,7 @@ int main(){
 
     printf("\n");
 
-    printf("偶数>> ");
+    printf("奇数>> ");
     for (int i = 0; i < length; i++)
     {
         if (listofNum[i] % 2 != 0){
@@ -27,6 +27,6 @@ int main(){
         }
     }
 
-    
+
     
 }
