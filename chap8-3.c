@@ -1,29 +1,37 @@
 #include <stdio.h>
 
 int main(){
-    int listofNum[10];
+    int listofNum[10], sumofArray;
     int length = sizeof(listofNum) / sizeof(listofNum[0]);
 
-    for (int i = 0; i < length; i++){
-        printf("%d番目の数値を入力：", i+1);
-        scanf_s("%d", &listofNum[i]);
-    }
-    
-    printf("偶数>> ");
-    for (int i = 0; i < length; i++)
+    while (1)
     {
-        if (listofNum[i] % 2 == 0){
-            printf("%d ", listofNum[i]);
+        for (int i = 0; i < length; i++){
+            printf("%d番目の数値を入力：", i+1);
+            scanf_s("%d", &listofNum[i]);
+            sumofArray += listofNum[i];
         }
-    }
-
-    printf("\n");
-
-    printf("奇数>> ");
-    for (int i = 0; i < length; i++)
-    {
-        if (listofNum[i] % 2 != 0){
+    
+        printf("偶数>> ");
+        for (int i = 0; i < length; i++){
+            if (listofNum[i] % 2 == 0){
             printf("%d ", listofNum[i]);
+            }
+        }
+        printf("\n");
+
+        printf("奇数>> ");
+        for (int i = 0; i < length; i++){
+            if (listofNum[i] % 2 != 0){
+            printf("%d ", listofNum[i]);
+            }
+        }
+        printf("\n");
+
+        printf("数値の合計>> %d\n", sumofArray);
+
+        if (sumofArray > 100){
+            break;
         }
     }
 }

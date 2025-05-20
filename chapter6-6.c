@@ -12,14 +12,17 @@ int upperCheck(char c){
 }
 
 int main(){
-    char c, result;
+    char userInput[256];
+    int length = sizeof(userInput) / sizeof(userInput[0]);
     
-    printf("文字を入力>>");
-    scanf_s("%c", &c);
+    printf("文字列を入力>> ");
+    gets(userInput); //đọc string bao gồm dấu cách/read string including space
 
-    result = upperCheck(c);
-
-    printf("変換結果: %c", result);
+    for (int i = 0; i < length; i++){
+        userInput[i] = upperCheck(userInput[i]);
+    }
+    
+    printf("変換結果>> %s", userInput);
 
     return 0;
 }
