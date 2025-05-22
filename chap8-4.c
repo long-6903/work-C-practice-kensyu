@@ -2,7 +2,7 @@
 #include <ctype.h>
 
 int main(){
-    int arrayofNum[10], arrayLen, arraySum;
+    int arrayofNum[10], arrayLen, arraySum = 0;
 
     arrayLen = sizeof(arrayofNum) / sizeof(arrayofNum[0]);
 
@@ -17,7 +17,7 @@ int main(){
 
         printf("sum>> %d\n", arraySum);
         
-        if (arraySum > 100)
+        if (arraySum >= 100)
         {
             break;
         }

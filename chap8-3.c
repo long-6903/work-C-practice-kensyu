@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    int listofNum[10], sumofArray = 0 /*scanfだと、*/;
+    int listofNum[10], sumofArray = 0 /*scanfだと、初期化されない*/;
     int length = sizeof(listofNum) / sizeof(listofNum[0]);
 
     while (1)
@@ -30,7 +30,7 @@ int main(){
 
         printf("数値の合計>> %d\n", sumofArray);
 
-        if (sumofArray > 100){
+        if (sumofArray >= 100){
             printf("入力した数値の合計が100超えたので締めます。");
             break;
         }
