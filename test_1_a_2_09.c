@@ -2,15 +2,13 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define chance = 10;
-
 int main(){
     srand(time(NULL));  // seed with current time
 
     int ranNum = rand() % 3 + 1;
     int playerNum;
 
-    while (1)
+    for (int i = 0; i< 10; i++)
     {
         printf("数値を入力してください：");
         scanf("%d", &playerNum);
