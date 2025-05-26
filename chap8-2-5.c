@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 int main(){
-    char sbinary[17]; //17 bit = 16bit + '\o'
+    char sbinary[17]; 
+    //17 bit = 16bit + '\o'(in order to be able to print the string out as %s, '\o' must be declared)
     int wattaValue, value, i;
 
     printf("値を入力>> ");
@@ -16,7 +17,7 @@ int main(){
     }
     
     //sbinary[16] = '\0'; // 文字列終端, 直接にfor loopのlimitにしてる
-    // 文字列として表示するには、最後に '\0' を追加する必要があります。
+        // 文字列として表示するには、最後に '\0' を追加する必要があります。
 
     for (int i = 0; sbinary[i] != '\0'; i++) // printing out char by char of sbinary string for testing
     {
