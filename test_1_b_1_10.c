@@ -4,8 +4,8 @@
 #include <string.h>
 
 int main(){
-    char str[256], *count = str, keyword;
-    int len = 0;
+    char str[256], keyword;
+    int i, count = 0, len = 0;
 
     printf("文字列を入力：");
     gets(str);
@@ -15,13 +15,11 @@ int main(){
     printf("探索する文字を入力してください：");
     scanf("%c", &keyword);
 
-    for (int i = 0; i < len; i++)
-    {
-        if (*(count + i) == keyword){
-            printf("Aの%d個目は、%d文字目です。\n" , i, i+1);
-        }
-        else{
-            break;
+    for (int i = 0; i < len; i++){
+        if (str[i] == keyword)
+        {
+            count++;
+            printf("%cの%d個目は、%d文字目です\n", keyword, count, i+1);
         }
     }
 
