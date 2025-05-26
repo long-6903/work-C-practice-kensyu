@@ -11,7 +11,7 @@ int main(){
     for (int i = 0; i< 10; i++)
     {
         printf("数値を入力してください：");
-        scanf("%d", &playerNum);
+        scanf_s("%d", &playerNum);
 
         if (playerNum < ranNum){
             printf("もうちょっと上\n");

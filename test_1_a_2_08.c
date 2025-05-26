@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h>  
 
 int main(){
     int choice;
@@ -24,12 +24,12 @@ int main(){
             break;
 
             case 3:
-                result = num * 16;
+                result = num * (1/16);
                 printf("3.オンスからポンドへ：%f\n", result);
             break;
 
             case 4:
-                result = num * (1/16);
+                result = num * 16;
                 printf("4.ポンドからオンスへ：%f\n", result);
             break;
 
